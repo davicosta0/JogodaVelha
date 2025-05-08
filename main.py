@@ -4,17 +4,15 @@ def exibir_tabuleiro(tabuleiro):
         print("-" * 10)
 
 def verificar_vitoria(tabuleiro):
-    # Verificar linhas
+
     for linha in tabuleiro:
         if linha[0] == linha[1] == linha[2] and linha[0] != " ":
             return True
 
-    # Verificar colunas
     for col in range(3):
         if tabuleiro[0][col] == tabuleiro[1][col] == tabuleiro[2][col] and tabuleiro[0][col] != " ":
             return True
 
-    # Verificar diagonais
     if tabuleiro[0][0] == tabuleiro[1][1] == tabuleiro[2][2] and tabuleiro[0][0] != " ":
         return True
     if tabuleiro[0][2] == tabuleiro[1][1] == tabuleiro[2][0] and tabuleiro[0][2] != " ":
